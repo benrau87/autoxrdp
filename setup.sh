@@ -6,8 +6,7 @@ if [ "$EUID" -ne 0 ]
 fi
 
 apt-get install xrdp -y
-apt-get update
-apt-get install mate-core mate-desktop-environment mate-notification-daemon
+apt-get install mate-core mate-desktop-environment mate-notification-daemon -y
 
 sed -i.bak '/fi/a #xrdp multiple users configuration \n mate-session \n' /etc/xrdp/startwm.sh
 
